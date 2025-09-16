@@ -2,19 +2,36 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="sn.css" />
     <title>シャムナクアのアレ</title>
 </head>
 <body>
 
-    <form id="form1" action="#">
-    <!--<input type="text" id="input-message">-->
-    <textarea cols="50" rows="10" id="input" placeholder="解読したい文章を入力"></textarea>
-    <input type="submit" onclick="clickMessageDisp()" value="解読">
-    <br>
-    解読した文章
-    <br>
-    <label id="output"></label>
-    </form>
+    <div class="flex">
+
+        <form id="form1" action="#">
+            <textarea cols="50" rows="10" id="input" placeholder="解読したい文章を入力"></textarea>
+            <input type="submit" onclick="clickMessageDisp()" value="解読">
+            <br>
+            解読した文章
+            <input type="submit" onclick="copy1()" value="コピー">
+            <br>
+            <label id="output"></label>
+        </form>
+
+        <script src="sn.js"></script>
+
+        <form id="form2" action="#">
+            <textarea cols="50" rows="10" id="input2" placeholder="暗号化したい文章を入力"></textarea>
+            <input type="submit" onclick="clickMessageDisp1()" value="暗号化">
+            <br>
+            暗号化した文章
+            <input type="submit" onclick="copy2()" value="コピー">
+            <br>
+            <label id="output2"></label>
+        </form>
+
+        </div>
 
     <script src="sn.js"></script>
 
