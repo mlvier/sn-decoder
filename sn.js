@@ -63,7 +63,7 @@ function sort2(a) {
         outary.push(ary1[i]);
     }
     outary.push("｜");
-    for(let i = ary1.length; i >= 0; i--){
+    for(let i = ary1.length-1; i >= 0; i--){
         outary.push(ary2[i]);
     }
     let output = outary.join('');
