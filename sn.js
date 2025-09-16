@@ -74,12 +74,12 @@ function copy1(){
     let str = document.getElementById("output").value;
     let str2 = str.split('<br>');
     let str3 = str2.join('\n');
-    navigator.clipboard.writeText(str);
+    navigator.clipboard.writeText("aaa");
 }
 
 function copy2(){
     let str = document.getElementById("output2").value;
     let str2 = str.split('<br>');
     let str3 = str2.join('\n');
-    navigator.clipboard.writeText(str);
+    navigator.clipboard.writeText(str3);
 }
