@@ -1,7 +1,11 @@
 function clickMessageDisp() {
     let str = document.getElementById("input").value;
-
     let str2 = str.split('\n');
+    let output = decode(str2).join('<br>');
+    document.getElementById("output").innerHTML = output;
+}
+
+function decode(str2){
     let prelen = str2.length;
     let ary = [];
     for(let i = 0; i < prelen; i++){
@@ -12,9 +16,7 @@ function clickMessageDisp() {
     for(let i = 0; i < prelen; i++){
         ary2.push(sort(ary[i]));
     }
-
-    let output = ary2.join('<br>');
-    document.getElementById("output").innerHTML = output;
+    return ary2;
 }
 
 function sort(a) {
@@ -30,8 +32,12 @@ function sort(a) {
 
 function clickMessageDisp1() {
     let str = document.getElementById("input2").value;
-
     let str2 = str.split('\n');
+    let output = encrypt(str2).join('<br>');
+    document.getElementById("output2").innerHTML = output;
+}
+
+function encrypt(str2){
     let prelen = str2.length;
     let ary = [];
     for(let i = 0; i < prelen; i++){
@@ -42,9 +48,7 @@ function clickMessageDisp1() {
     for(let i = 0; i < prelen; i++){
         ary2.push(sort2(ary[i]));
     }
-
-    let output = ary2.join('<br>');
-    document.getElementById("output2").innerHTML = output;
+    return ary2;
 }
 
 function sort2(a) {
@@ -71,15 +75,15 @@ function sort2(a) {
 }
 
 function copy1(){
-    let str = document.getElementById("output").value;
-    let str2 = str.split('<br>');
-    let str3 = str2.join('\n');
-    navigator.clipboard.writeText("aaa");
+    let str = document.getElementById("input").value;
+    let str2 = str.split('\n');
+    let output = decode(str2).join('\n');
+    navigator.clipboard.writeText(output);
 }
 
 function copy2(){
-    let str = document.getElementById("output2").value;
-    let str2 = str.split('<br>');
-    let str3 = str2.join('\n');
-    navigator.clipboard.writeText(str3);
+    let str = document.getElementById("input2").value;
+    let str2 = str.split('\n');
+    let output = encrypt(str2).join('\n');
+    navigator.clipboard.writeText(output);
 }
